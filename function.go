@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	user_score := 79
-	user_presence := 14
-	user_firstName := "Marchel"
-	user_lastName := "Manullang"
+	userScore := 79
+	userPresence := 14
+	userFirstname := "Marchel"
+	userLastname := "Manullang"
 
-	if eligible(user_score, user_presence) == true {
-		fmt.Println(graduate(user_firstName, user_lastName))
+	if eligible(userScore, userPresence) == true {
+		fmt.Println(graduate(userFirstname, userLastname))
 	} else {
 		fmt.Println("see you next year")
 	}
@@ -18,9 +18,8 @@ func main() {
 func eligible(scores int, presence int) bool {
 	if scores >= 80 && presence >= 13 {
 		return true
-	} else {
-		return false
 	}
+	return false
 }
 
 func graduate(firstName, lastName string) string {
