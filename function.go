@@ -3,10 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	userScore := 59
-	userPresence := 14
+	userScore := 80
+	userPresence := 13
 	userFirstname := "Marchel"
 	userLastname := "Manullang"
+
+	sayHello()
 
 	if eligible(userScore, userPresence) == true {
 		fmt.Println(graduate(userFirstname, userLastname))
@@ -17,6 +19,12 @@ func main() {
 	}
 }
 
+// Function
+func sayHello() {
+	fmt.Println("Hello")
+}
+
+// Function with parameter and return value
 func grade(scores int) string {
 	if scores >= 80 {
 		return "A"
