@@ -3,20 +3,39 @@ package main
 import "fmt"
 
 func main() {
-	userScore := 79
+	userScore := 59
 	userPresence := 14
 	userFirstname := "Marchel"
 	userLastname := "Manullang"
 
 	if eligible(userScore, userPresence) == true {
 		fmt.Println(graduate(userFirstname, userLastname))
+		fmt.Println("Your score :", grade(userScore))
 	} else {
 		fmt.Println("see you next year")
+		fmt.Println("Your Score :", grade(userScore))
 	}
 }
 
+func grade(scores int) string {
+	if scores >= 80 {
+		return "A"
+	} else if scores >= 75 {
+		return "B+"
+	} else if scores >= 70 {
+		return "B"
+	} else if scores >= 65 {
+		return "C+"
+	} else if scores >= 60 {
+		return "C"
+	} else if scores >= 50 {
+		return "D"
+	}
+	return "E"
+}
+
 func eligible(scores int, presence int) bool {
-	if scores >= 80 && presence >= 13 {
+	if scores >= 60 && presence >= 13 {
 		return true
 	}
 	return false
