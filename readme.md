@@ -15,3 +15,8 @@ Golang Playlist 1 (Golang Dasar : 3:28:46)
 Golang Playlist 1 (Golang Dasar : 3:41:25)
 > Keterangan : Durasi belajar singkat dikarenakan 
 mengerjakan tugas kuliah
+
+#### 18/12/2025
+
+Golang Playlist 1 (Golang Dasar : 4:15:37)
+> Keterangan : Durasi Belajar 3 jam 31 menit 17 detik
