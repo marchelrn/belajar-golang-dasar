@@ -20,3 +20,6 @@ mengerjakan tugas kuliah
 
 Golang Playlist 1 (Golang Dasar : 4:15:37)
 > Keterangan : Durasi Belajar 3 jam 31 menit 17 detik
+
+#### 19/12/2025
+Golang Playlist 1 (Golang Dasar : Done)
