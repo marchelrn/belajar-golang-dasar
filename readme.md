@@ -23,3 +23,8 @@ Golang Playlist 1 (Golang Dasar : 4:15:37)
 
 #### 19/12/2025
 Golang Playlist 1 (Golang Dasar : Done)
+
+#### 20/12/2025
+> Sesi siang
+
+Golang Playlist 2 (Golang Standard Library : 00:41:06)
