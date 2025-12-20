@@ -28,3 +28,7 @@ Golang Playlist 1 (Golang Dasar : Done)
 > Sesi siang
 
 Golang Playlist 2 (Golang Standard Library : 00:41:06)
+
+> Sesi Malam
+
+Golang Playlist 2 (Golang Standard Library : 01:00:40)
