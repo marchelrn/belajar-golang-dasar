@@ -47,3 +47,8 @@ Golang Playlist 2 (Golang Standard Library : 1:55:23)
 > Sesi Malam
 
 Golang Playlist 2 (Golang Standard Library : Done)  
+
+#### 23/12/2025
+> Sesi siang
+
+Golang Playlist 3 (Golang Modules : Done)
