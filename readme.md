@@ -61,3 +61,8 @@ Golang Playlist 4 (Golang Unit Testing : 00:43:24)
 > Sesi Malam
 
 Golang Playlist 4 (Golang Unit Testing : 01:04:46)
+
+##### 25/12/2025
+> Sesi siang
+
+Golang Playlist 4 (Golang Unit Testing : 1:26:45)
