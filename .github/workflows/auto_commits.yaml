@@ -24,7 +24,7 @@ jobs:
         run: |
           date > bot_log.txt
           git status
-          git add belajar-golang-goroutine
+          git add bot_log.txt
           git add readme.md
-          git commit -m "Sesi pagi - Auto Update" || echo "Tidak ada perubahan"
+          git commit -m "Auto Update" || echo "Tidak ada perubahan"
           git push origin master
