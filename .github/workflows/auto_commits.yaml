@@ -23,5 +23,5 @@ jobs:
           git status
           git add belajar-golang-goroutine
           git add readme.md
-          git commit -m "Sesi pagi"
+          git commit -m "Sesi pagi - Auto Update" || echo "Tidak ada perubahan"
           git push origin master
