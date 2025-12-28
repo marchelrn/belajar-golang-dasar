@@ -88,3 +88,10 @@ Golang Playlist 5 (Golang Goroutine : 01:42:00)
 > Sesi Malam
 
 Golang Playlist 5 (Golang Goroutine : 01:55:00)
+
+##### 29/12/2025
+> Hari ini liburan jadi hanya sedikit course yang dipelajari
+> 
+> Sesi siang
+
+Golang Playlist 5 (Golang Goroutine : 02:09:00 )

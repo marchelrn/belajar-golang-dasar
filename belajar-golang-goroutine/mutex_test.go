@@ -104,3 +104,5 @@ func TestDeadlock(t *testing.T) {
 	fmt.Println("User 1 :", user1.name, ", Balance :", user1.Balance)
 	fmt.Println("User 2 :", user2.name, ", Balance :", user2.Balance)
 }
+
+// test github actions
