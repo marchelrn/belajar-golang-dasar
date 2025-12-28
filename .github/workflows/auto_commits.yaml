@@ -1,0 +1,25 @@
+name: Scheduled Commit
+
+on:
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "marchelcde"
+          git config --global user.email "marchelmanullang026@student.unsrat.ac.id"
+
+      - name: Add, Commit and Push
+        run: |
+          git add belajar-golang-goroutine readme.md
+          git commit -m "Sesi siang"
+          git push
