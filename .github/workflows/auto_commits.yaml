@@ -22,6 +22,7 @@ jobs:
 
       - name: Add, Commit and Push
         run: |
+          date > bot_log.txt
           git status
           git add belajar-golang-goroutine
           git add readme.md
