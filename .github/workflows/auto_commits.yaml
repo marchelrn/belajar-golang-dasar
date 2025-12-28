@@ -20,6 +20,6 @@ jobs:
 
       - name: Add, Commit and Push
         run: |
-          git add belajar-golang-goroutine/github_test_workflow
+          git add belajar-golang-goroutine/github_test_workflow.txt
           git commit -m "Sesi pagi"
           git push
