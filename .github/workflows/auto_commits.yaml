@@ -20,6 +20,7 @@ jobs:
 
       - name: Add, Commit and Push
         run: |
-          git add belajar-golang-goroutine readme.md
+          git add belajar-golang-goroutine 
+          git add readme.md
           git commit -m "Sesi siang"
           git push
