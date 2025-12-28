@@ -84,3 +84,7 @@ Golang Playlist 5 (Golang Goroutine : 01:19:00)
 > Sesi siang
 
 Golang Playlist 5 (Golang Goroutine : 01:42:00)
+
+> Sesi Malam
+
+Golang Playlist 5 (Golang Goroutine : 01:55:00)

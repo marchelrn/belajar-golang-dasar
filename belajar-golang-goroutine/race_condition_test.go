@@ -8,13 +8,13 @@ import (
 
 func TestRaceCondition(t *testing.T) {
 	x := 0
-	for i := 0; i < 1000; i++ {
+	for i := 1; i <= 1000; i++ {
 		go func() {
-			for j := 0; j <= 100; j++ {
+			for j := 1; j <= 100; j++ {
 				x += 1
 			}
 		}()
 	}
-	time.Sleep(20 * time.Second)
+	time.Sleep(2 * time.Second)
 	fmt.Println("Counter:", x)
 }
