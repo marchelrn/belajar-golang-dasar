@@ -95,3 +95,8 @@ Golang Playlist 5 (Golang Goroutine : 01:55:00)
 > Sesi siang
 
 Golang Playlist 5 (Golang Goroutine : 02:09:00 )
+
+##### 30/12/2025
+> Sesi siang
+
+Golang Playlist 5 (Golang Goroutine : 2:26:00)
