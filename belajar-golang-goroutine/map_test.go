@@ -20,8 +20,9 @@ func TestMap(t *testing.T) {
 		go AddToMap(data, i, group)
 	}
 	group.Wait()
-	data.Range(func(key, value interface{}) bool {
-		fmt.Println("Key:", key, "Value:", value)
+
+	data.Range(func(key, value any) bool {
+		fmt.Println(key, value)
 		return true
 	})
 }
