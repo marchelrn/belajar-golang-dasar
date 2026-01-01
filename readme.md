@@ -109,4 +109,8 @@ Golang Playlist 5 (Golang Goroutine : Done)
 ##### 01/01/2026
 > Sesi siang
 
-Golang Playlist 8 (Golang Context : 00:34:00)
+Golang Playlist 6 (Golang Context : 00:34:00)
+
+> Sesi Malam
+
+Golang Playlist 6 (Golang Context : Done)
