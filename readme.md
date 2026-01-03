@@ -119,3 +119,8 @@ Golang Playlist 6 (Golang Context : Done)
 > Sesi Malam
 
 Golang Playlist 7 (Golang Database : 00:44:00)
+
+##### 03/01/2026
+> Sesi siang
+
+Golang Playlist 7 (Golang Database : 00:53:00)
