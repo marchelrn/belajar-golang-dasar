@@ -87,3 +87,74 @@ func TestQuerySql(t *testing.T) {
 //		fmt.Println("Name:", name)
 //	}
 //}
+
+func TestQueryComplex(t *testing.T) {
+	db := GetConnection()
+	defer db.Close()
+	ctx := context.Background()
+	query := "SELECT id, name,email,balance,birth_date,rating,married,created_at FROM customer"
+	rows, err := db.QueryContext(ctx, query)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		var id, name string
+		var email sql.NullString
+		var balance sql.NullInt32
+		var rating sql.NullFloat64
+		var birthDate, createdAt sql.NullTime
+		var married sql.NullBool
+		err := rows.Scan(&id, &name, &email, &balance, &birthDate, &rating, &married, &createdAt)
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println("---------------------")
+		fmt.Println("ID:", id)
+		fmt.Println("Name:", name)
+		if email.Valid {
+			fmt.Println("Email:", email.String)
+		}
+		if balance.Valid {
+			fmt.Println("Balance:", balance.Int32)
+		}
+		if rating.Valid {
+			fmt.Println("Rating:", rating.Float64)
+		}
+		if birthDate.Valid {
+			fmt.Println("Birth Date:", birthDate.Time)
+		}
+		if married.Valid {
+			fmt.Println("Married:", married.Bool)
+		}
+		fmt.Println("---------------------")
+	}
+}
+
+func TestSqlInjection(t *testing.T) {
+	db := GetConnection()
+	defer db.Close()
+	ctx := context.Background()
+	username := "admin'; --"
+	password := "admin123"
+
+	query := "SELECT username FROM users WHERE username='" + username + "' AND password='" + password + "' LIMIT 1"
+	fmt.Println(query)
+	rows, err := db.QueryContext(ctx, query)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	if rows.Next() {
+		var username string
+		err := rows.Scan(&username)
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println("Login Success:", username)
+	} else {
+		fmt.Println("Login Failed")
+	}
+}

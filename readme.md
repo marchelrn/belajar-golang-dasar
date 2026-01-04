@@ -124,3 +124,8 @@ Golang Playlist 7 (Golang Database : 00:44:00)
 > Sesi siang
 
 Golang Playlist 7 (Golang Database : 00:53:00)
+
+##### 04/01/2026
+> Sesi malam
+
+Golang Playlist 7 (Golang Database : 1:25:00)
