@@ -129,3 +129,10 @@ Golang Playlist 7 (Golang Database : 00:53:00)
 > Sesi malam
 
 Golang Playlist 7 (Golang Database : 1:25:00)
+
+##### 11/01/2026
+> Sesi malam
+> 
+> Keterangan : Libur belajar 7 hari karena mengerjakan project website untuk klien
+
+ Golang Playlist 7 (Golang Database : 1:33:00)
