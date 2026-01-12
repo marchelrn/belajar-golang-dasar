@@ -199,3 +199,20 @@ func TestExecSqlParameter(t *testing.T) {
 	}
 	fmt.Println("Success insert new customer")
 }
+
+func TestAutoIncrement(*testing.T) {
+	db := GetConnection()
+	defer db.Close()
+	ctx := context.Background()
+	email := "manullang@gmail.com"
+	comment := "hallo test"
+
+	query := "INSERT INTO comments(email, comment) VALUES($1, $2) RETURNING id"
+	var resultId int64
+	err := db.QueryRowContext(ctx, query, email, comment).Scan(&resultId)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Last Insert ID:", resultId)
+}
