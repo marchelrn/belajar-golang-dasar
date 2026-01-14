@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"strconv"
 	"testing"
 )
 
@@ -215,4 +216,56 @@ func TestAutoIncrement(*testing.T) {
 	}
 
 	fmt.Println("Last Insert ID:", resultId)
+}
+
+func TestPrepareStatement(t *testing.T) {
+	db := GetConnection()
+	defer db.Close()
+	ctx := context.Background()
+	query := "INSERT INTO comments(email, comment) VALUES($1, $2) RETURNING id"
+	stmt, err := db.PrepareContext(ctx, query)
+	if err != nil {
+		panic(err)
+	}
+	defer stmt.Close()
+
+	for i := 0; i < 10; i++ {
+		email := "ANCE" + strconv.Itoa(i) + "@gmail.com"
+		comment := "hallo test ke " + strconv.Itoa(i)
+
+		var resultId int64
+		err = stmt.QueryRowContext(ctx, email, comment).Scan(&resultId)
+		if err != nil {
+			panic(err)
+		}
+
+		fmt.Println("Last Insert ID:", resultId)
+	}
+}
+
+func TestTransaction(t *testing.T) {
+	db := GetConnection()
+	defer db.Close()
+	ctx := context.Background()
+	tx, err := db.Begin()
+	if err != nil {
+		panic(err)
+	}
+	query := "INSERT INTO comments(email, comment) VALUES($1, $2) RETURNING id"
+	for i := 0; i < 10; i++ {
+		email := "TRANSACTIONt" + strconv.Itoa(i) + "@gmail.com"
+		comment := "hallo transaction ke " + strconv.Itoa(i)
+
+		var resultId int64
+		err = tx.QueryRowContext(ctx, query, email, comment).Scan(&resultId)
+		if err != nil {
+			panic(err)
+		}
+
+		fmt.Println("Last Insert ID:", resultId)
+	}
+	err = tx.Commit()
+	if err != nil {
+		panic(err)
+	}
 }
