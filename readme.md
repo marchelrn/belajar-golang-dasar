@@ -147,3 +147,8 @@ Golang Playlist 7 (Golang Database : 1:39:00)
 
 Golang Playlist 7 (Golang Database : Done)
 Golang Playlist 8 (Golang Embed : Done)
+
+##### 15/01/2026
+> Sesi siang
+
+Golang Playlist 9 (Golang Web : 01:02:00)

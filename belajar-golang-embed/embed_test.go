@@ -1,4 +1,4 @@
-package test
+package main
 
 import (
 	"embed"
@@ -16,7 +16,7 @@ func TestSting(t *testing.T) {
 	fmt.Println(version)
 }
 
-//go:embed ../logo.png
+//go:embed logo.png
 var logo []byte
 
 func TestByte(t *testing.T) {
