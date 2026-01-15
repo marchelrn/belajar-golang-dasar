@@ -152,3 +152,8 @@ Golang Playlist 8 (Golang Embed : Done)
 > Sesi siang
 
 Golang Playlist 9 (Golang Web : 01:02:00)
+
+##### 16/01/2026
+> Sesi Pagi
+
+Golang Playlist 9 (Golang Web : 01:29:00)
