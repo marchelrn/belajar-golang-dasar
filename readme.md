@@ -157,3 +157,8 @@ Golang Playlist 9 (Golang Web : 01:02:00)
 > Sesi Pagi
 
 Golang Playlist 9 (Golang Web : 01:29:00)
+
+##### 17/01/2026
+> Sesi Malam
+
+Golang Playlist 9 (Golang Web : 1:59:00)
