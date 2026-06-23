@@ -162,3 +162,8 @@ Golang Playlist 9 (Golang Web : 01:29:00)
 > Sesi Malam
 
 Golang Playlist 9 (Golang Web : 1:59:00)
+
+##### 23/06/2026
+> Sesi Sore
+
+Golang Playlist 9 (Golang Web : 02:34:00)
