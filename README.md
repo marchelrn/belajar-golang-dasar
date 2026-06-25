@@ -167,3 +167,8 @@ Golang Playlist 9 (Golang Web : 1:59:00)
 > Sesi Sore
 
 Golang Playlist 9 (Golang Web : 02:34:00)
+
+##### 25/06/2026
+> Sesi Sore
+
+Golang Playlist 9 (Golang Web : 02:49:00)
