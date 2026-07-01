@@ -8,9 +8,15 @@
 </head>
 
 <body>
+{{if .Name }}
+    <p>Hello {{.Name}}</p>
+{{else if .LastName}}
+    <p>Hello {{.LastName}}</p>
+{{else}}
+    <p> Hello </p>
+{{end}}
 
-<p>Hallo {{.Name}}</p>
-<p> Address:  {{.Address.Street}} </p> <!-- Nested Struct -->
+<p> Address:  {{.Address.Street}} </p>  {{/*Nested Struct*/}}
 </body>
 
 </html>

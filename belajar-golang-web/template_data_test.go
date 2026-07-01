@@ -12,8 +12,11 @@ import (
 func TemplateDataMap(writer http.ResponseWriter, request *http.Request) {
 	t := template.Must(template.ParseFiles("templates/name.gohtml"))
 	err := t.ExecuteTemplate(writer, "name.gohtml", map[string]interface{}{
-		"title": "Marchel's Page",
-		"name":  "Marchel",
+		"Title": "Marchel's Page",
+		"Name":  "Marchel",
+		"Address": map[string]interface{}{
+			"Street": "Jalan belum ada",
+		},
 	})
 
 	if err != nil {
@@ -34,15 +37,23 @@ func TestTemplateDataMap(t *testing.T) {
 // Struct
 
 type Page struct {
-	title string
-	name  string
+	Title   string
+	Name    string
+	Address Address
+}
+
+type Address struct {
+	Street string
 }
 
 func TemplateDataStruct(writer http.ResponseWriter, request *http.Request) {
 	t := template.Must(template.ParseFiles("templates/name.gohtml"))
 	err := t.ExecuteTemplate(writer, "name.gohtml", Page{
-		title: "Marchel's Page",
-		name:  "Marchel",
+		Title: "Marchel's Page",
+		Name:  "Marchel",
+		Address: Address{
+			Street: "Malalayang",
+		},
 	})
 	if err != nil {
 		panic(err)
