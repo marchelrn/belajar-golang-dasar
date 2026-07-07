@@ -2,6 +2,7 @@ package belajar_golang_web
 
 import (
 	"bytes"
+	_ "embed"
 	"fmt"
 	"io"
 	"mime/multipart"
@@ -58,17 +59,30 @@ func TestUploadForm(t *testing.T) {
 	}
 }
 
+//go:embed "resources/letter_m.png"
+var UploadFileTest []byte
+
 func TestUploadFile(t *testing.T) {
 	body := new(bytes.Buffer)
 	writer := multipart.NewWriter(body)
-	writer.WriteField("name", "Marchel Manullang")
+	err := writer.WriteField("name", "Marchel Manullang")
+	if err != nil {
+		return
+	}
 	file, _ := writer.CreateFormFile("file", "CONTOHUPLOAD.png")
-	file.Write([]byte("Hello World"))
-
+	_, err = file.Write(UploadFileTest)
+	if err != nil {
+		panic(err)
+	}
+	err = writer.Close()
+	if err != nil {
+		return
+	}
 	request := httptest.NewRequest(http.MethodPost, "localhost:8080/upload", body)
+	request.Header.Set("Content-Type", writer.FormDataContentType())
 	recorder := httptest.NewRecorder()
 
-	TemplateEmbed(recorder, request)
+	Upload(recorder, request)
 
 	bodyBytes, _ := io.ReadAll(recorder.Result().Body)
 	fmt.Println(string(bodyBytes))

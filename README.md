@@ -192,3 +192,8 @@ Golang Playlist 9 (Golang Web : 03:44:00)
 > Kantor
 
 Golang Playlist 9 (Golang Web : 04:08:14
+
+##### 07/07/2026
+> Kantor
+
+Golang Playlist 9 (Golang Web : 04:14:00
