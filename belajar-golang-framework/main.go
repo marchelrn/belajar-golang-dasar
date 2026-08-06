@@ -14,16 +14,20 @@ func main() {
 
 	httpMethod := setupHttpMethodRoutes()
 	parametersInPath := setupParametersInPathRoutes()
-	queryStringParam := setupQueryStringParameters()
+	queryStringParam := setupQueryStringParametersRoutes()
+	routing := setupRouting()
+	multiPart := multipartFormRoutes()
 
 	m := map[int]*gin.Engine{
 		1: httpMethod,
 		2: parametersInPath,
 		3: queryStringParam,
+		4: routing,
+		5: multiPart,
 	}
 	srv := &http.Server{
 		Addr:    ":8000",
-		Handler: m[3],
+		Handler: m[5],
 	}
 
 	if err := srv.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {

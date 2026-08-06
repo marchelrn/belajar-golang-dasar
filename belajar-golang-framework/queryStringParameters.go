@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func setupQueryStringParameters() *gin.Engine {
+func setupQueryStringParametersRoutes() *gin.Engine {
 	router := gin.Default()
 
 	router.GET("/welcome", func(c *gin.Context) {
